@@ -1,0 +1,10 @@
+node_modules/
+client/dist/
+server/.env
+.env
+.env.database-admin
+.local-backups/
+.local-logs/
+*.log
+.pnpm-store/
+

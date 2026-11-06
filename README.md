@@ -1,24 +1,25 @@
-# Gym Management System
+# Triple J Fitness Center Management System
 
-A MySQL database project for managing gym members, membership plans, subscriptions, payments, attendance, staff, and inventory.
+A full-stack gym management application built with React, Express, and MySQL 8.
 
-## Database design
+## Features
 
-The schema includes eight related tables: `members`, `membership_plans`, `member_memberships`, `payments`, `attendance`, `staff`, `inventory_items`, and `inventory_transactions`. Foreign keys and checks protect transaction consistency.
+- Admin and staff dashboards for members, plans, billing, and attendance
+- Member portal with recent visit history and a live visit timer
+- Gym capacity and visit-limit rules, suspension review, and check-in controls
+- Membership renewal and refund workflows
+- Inventory sales and restocks with transaction history
+- Equipment records and maintenance tickets
+- Role-based API access and encrypted emergency contact fields
 
-## What this project demonstrates
+## Project structure
 
-- Relational modeling with primary keys, foreign keys, unique constraints, and validation checks
-- Sample data and verification queries
-- Role-based database privileges
-- Transactions for multi-step changes
-- Index and query optimization examples
-- A classroom encryption example for an emergency contact field
+- `client/`: React and Vite user interface
+- `server/`: Express API, MySQL schema, migrations, and services
+- `scripts/`: local development launcher
 
-## Run locally
+## Local setup
 
-Use MySQL 8.0 or later. Execute `database/01_create_database.sql`, `database/02_create_tables.sql`, and `database/04_seed_data.sql` in that order. Run `database/verify_database.sql` to inspect the result. The other folders contain separate demonstrations and should be reviewed before execution.
+Install dependencies with `npm install --prefix server` and `npm install --prefix client`. Configure a private local environment file with your own database connection, JWT secret, encryption key, and initial account passwords. Run `npm run db:setup` for a fresh MySQL 8 database, then `npm run dev` and open `http://localhost:5173`.
 
-The authorization and encryption examples contain `REPLACE_WITH_LOCAL_PASSWORD` and `REPLACE_WITH_LOCAL_DEMO_KEY` placeholders. Replace them only in a local copy with values appropriate to your environment. Do not commit real credentials. The names, contact details, and payment entries in the seed data are fictional classroom examples.
-
-This repository contains SQL scripts and database examples, not a deployed web application.
+Do not commit local environment files, database backups, credentials, or actual member records.

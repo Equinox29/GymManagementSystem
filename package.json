@@ -1,0 +1,12 @@
+{
+  "name": "gym-management-localhost",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/dev.js",
+    "test": "npm test --prefix server",
+    "audit": "npm audit --prefix server && npm audit --prefix client",
+    "db:setup": "node server/scripts/setup-database.js",
+    "test:integration": "node server/scripts/verify-system.js"
+  }
+}
