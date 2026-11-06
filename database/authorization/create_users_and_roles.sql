@@ -1,0 +1,4 @@
+CREATE ROLE IF NOT EXISTS 'gym_staff_role';
+
+CREATE USER IF NOT EXISTS 'front_desk_rafael'@'localhost'
+IDENTIFIED BY 'REPLACE_WITH_LOCAL_PASSWORD';
